@@ -1,0 +1,223 @@
+/* Variables */
+:root {
+    --blue: #9EBBD3;
+    --black: #000000;
+    --grey: #cccccc;
+}
+
+/* Body */
+body {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 14px;
+    background: #f2f2f2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Clearfix */
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    height: 0;
+    
+}
+
+/* Form Wrapper */
+.form_wrapper {
+    background: #fff;
+    width: 400px;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 25px;
+    margin-top:25%;
+    position: relative;
+    z-index: 1;
+    border-top: 10px solid var(--blue);
+    transform-origin: 50% 0%;
+    transition: none;
+    animation: expand 0.8s 0.6s ease-out forwards;
+    opacity: 0;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+    border-radius: 10px;
+}
+
+.form_wrapper h2 {
+    font-size: 1.5em;
+    line-height: 1.5em;
+    margin: 0;
+}
+
+.form_wrapper .title_container {
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.form_wrapper h3 {
+    font-size: 1.1em;
+    font-weight: normal;
+    line-height: 1.5em;
+    margin: 0;
+}
+
+.form_wrapper label {
+    font-size: 12px;
+}
+
+.form_wrapper .row {
+    margin: 10px -15px;
+}
+
+.form_wrapper .row>div {
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.form_wrapper .col_half {
+    width: 50%;
+    float: left;
+}
+
+.form_wrapper .input_field {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.form_wrapper .input_field>span {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    height: 100%;
+    border-right: 1px solid var(--grey);
+    text-align: center;
+    width: 30px;
+}
+
+.form_wrapper input[type="text"],
+.form_wrapper input[type="email"],
+.form_wrapper input[type="number"],
+.form_wrapper input[type="date"] {
+    width: 100%;
+    padding: 8px 10px 9px 35px;
+    height: 35px;
+    border: 1px solid var(--grey);
+    box-sizing: border-box;
+    outline: none;
+    transition: all 0.30s ease-in-out;
+}
+
+.form_wrapper input[type="text"]:hover,
+.form_wrapper input[type="email"]:hover,
+.form_wrapper input[type="number"],
+.form_wrapper input[type="date"]:hover {
+    background: #fafafa;
+}
+
+.form_wrapper input[type="text"]:focus,
+.form_wrapper input[type="email"]:focus,
+.form_wrapper input[type="number"],
+.form_wrapper input[type="date"]:focus {
+    box-shadow: 0 0 2px 1px #9EBBD3;
+    border: 1px solid var(--blue);
+    background: #fafafa;
+}
+
+.form_wrapper input[type="submit"] {
+    background:  #4082b7;
+    height: 35px;
+    line-height: 35px;
+    width: 100%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    transition: all 0.30s ease-in-out;
+}
+
+.form_wrapper input[type="submit"]:hover {
+     background:  #15548b;
+}
+
+.form_wrapper input[type="submit"]:focus {
+      background:  #15548b;
+}
+
+
+.credit {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding-top: 50px;
+}
+
+/* Keyframe Animations */
+@keyframes check {
+    0% {
+        height: 0;
+        width: 0;
+    }
+
+    25% {
+        height: 0;
+        width: 7px;
+    }
+
+    50% {
+        height: 20px;
+        width: 7px;
+    }
+}
+
+@keyframes expand {
+    0% {
+        transform: scale3d(1, 0, 1);
+        opacity: 0;
+    }
+
+    25% {
+        transform: scale3d(1, 1.2, 1);
+    }
+
+    50% {
+        transform: scale3d(1, 0.85, 1);
+    }
+
+    75% {
+        transform: scale3d(1, 1.05, 1);
+    }
+
+    100% {
+        transform: scale3d(1, 1, 1);
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: translate3d(0, -25px, 0);
+        opacity: 0;
+    }
+
+    25% {
+        transform: translate3d(0, 10px, 0);
+    }
+
+    50% {
+        transform: translate3d(0, -6px, 0);
+    }
+
+    75% {
+        transform: translate3d(0, 2px, 0);
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
